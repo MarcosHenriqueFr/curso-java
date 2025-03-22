@@ -1,4 +1,4 @@
-package nestedclass;
+package classe.aninhada;
 
 //Não preciso dar acesso a tudo para o usuario
 public class Inners {

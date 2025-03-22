@@ -1,4 +1,4 @@
-package nestedclass;
+package classe.aninhada;
 
 //São definidas quando instanciadas
 public class Anonimas {

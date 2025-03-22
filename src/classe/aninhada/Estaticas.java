@@ -1,4 +1,4 @@
-package nestedclass;
+package classe.aninhada;
 
 class ClasseFora {
 

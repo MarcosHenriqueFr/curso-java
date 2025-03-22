@@ -1,4 +1,4 @@
-package nestedclass;
+package classe.aninhada;
 
 //Elas ficam dentro do métodos e morrem ao fim dele
 //São non static por natureza, e aplicam as mesmas regras da inner
