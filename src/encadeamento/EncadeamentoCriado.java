@@ -1,16 +1,13 @@
 package encadeamento;
 
 public class EncadeamentoCriado {
-    //Também chamado de Fluent Programming
-
+    //Também chamado de Fluent Programming/Interface
+    //Fica mais legivel
+    //a.setNome("Jorge").setNota(3.90);
     public static void main(String[] args) {
 
         //Levaria mais tempo, daria para fazer isso com method chaining ou o construtor
-        Aluno a = new Aluno();
-
-        //Fica mais legivel
-        a.setNome("Jorge").setNota(3.90);
-        System.out.println(a);
+        Aluno a = new Aluno().setNome("Jorge").setNota(3.90).displayAluno();
     }
 }
 
@@ -26,6 +23,11 @@ class Aluno {
 
     public Aluno setNota(double nota){
         this.nota = nota;
+        return this;
+    }
+
+    public Aluno displayAluno(){
+        System.out.println(this);
         return this;
     }
 
