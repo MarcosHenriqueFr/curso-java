@@ -5,7 +5,7 @@ import java.util.EnumMap;
 public class Teste {
 
     //Constantes de Enum, substituiu as constantes inteiras e reserva somente para essas 4 constantes
-    enum Nivel {
+    private enum Nivel {
         ALTO, MEDIO, BAIXO;
     }
     public static void main(String[] args) {
