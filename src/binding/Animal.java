@@ -7,7 +7,7 @@ public class Animal {
         setNome(nome);
     }
 
-    //Sobrecarga estatica de metodos
+    //Sobrecarga estatica de metodos, compile time
     public void fazerBarulho(String som){
         System.out.println(som);
     }
@@ -16,6 +16,14 @@ public class Animal {
         for(int i = 0; i < repetir; i++){
             System.out.println(som);
         }
+    }
+
+    public static void pular(Animal a){
+        System.out.println("O Animal pulou! " + a.getNome());
+    }
+
+    public static void pular(Cachorro c) {
+        System.out.println("O cachorro pulou! " + c.getNome());
     }
 
     public String getNome() {
