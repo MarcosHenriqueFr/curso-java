@@ -25,10 +25,11 @@ public class Controle {
         return true;
     }
 
-    // Muito restrito
-    public void printPessoaMaisVelha(int idade){
+    // Qualquer metodo de checagem que eu decida implementar com uma interface
+    public void printPessoas(ChecarPessoa tester){
         for(Pessoa p: lista){
-            if(p.getIdade() > idade){
+            //ou se p.idade >= idadeMenor
+            if(tester.teste(p)){
                 p.printPessoa();
             }
         }
