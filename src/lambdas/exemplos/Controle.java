@@ -2,6 +2,7 @@ package lambdas.exemplos;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public class Controle {
 
@@ -26,11 +27,10 @@ public class Controle {
     }
 
     // Qualquer metodo de checagem que eu decida implementar com uma interface
-    public void printPessoas(ChecarPessoa tester){
-        for(Pessoa p: lista){
-            //ou se p.idade >= idadeMenor
-            if(tester.teste(p)){
-                p.printPessoa();
+    public void printPessoasComPredicate(Predicate<Pessoa> tester){
+        for(Pessoa pessoa: lista){
+            if(tester.test(pessoa)){
+                pessoa.printPessoa();
             }
         }
     }

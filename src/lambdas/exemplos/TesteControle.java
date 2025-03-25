@@ -24,26 +24,16 @@ public class TesteControle {
         c.adicionarPessoa(p4);
         c.adicionarPessoa(p5);
 
-        System.out.println("Pessoas que podem aposentar: ");
-        c.printPessoas(new ChecarPessoaParaAposentadoria());
-        System.out.println();
-
-        //Usando classe anonima
-        System.out.println("Pessoas que tem menos de 20 anos: ");
-        c.printPessoas(new ChecarPessoa() {
-
-            @Override
-            public boolean teste(Pessoa p) {
-                return p.getIdade() < 20;
-            }
-        });
-        System.out.println();
-
-        //Usando LAMBDASCriada
+        //Usando LAMBDAS Criadas
         System.out.println("Homens listados: ");
-        c.printPessoas(p -> p.getSexo() == Pessoa.Sex.MALE);
+        c.printPessoasComPredicate(p -> p.getSexo() == Pessoa.Sex.MALE);
         System.out.println();
 
         //Usando Interfaces Funcionais já existentes
+        System.out.println("Mulheres listadas: ");
+        c.printPessoasComPredicate(pessoa -> pessoa.getSexo() == Pessoa.Sex.FEMALE);
+
+        System.out.println("Mulheres com mais de 25 anos: ");
+        c.printPessoasComPredicate(pessoa -> pessoa.getSexo() == Pessoa.Sex.FEMALE && pessoa.getIdade() > 25);
     }
 }
